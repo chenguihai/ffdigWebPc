@@ -1,0 +1,38 @@
+@import '../../assets/default.less';
+
+.weChat {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  //align-items: center;
+  flex: 1;
+  flex-direction: column;
+
+  .subheading {
+    height: 24px;
+    line-height: 24px;
+    font-size: 24px;
+    margin-bottom: 50px;
+    color: @c_333;
+    text-align: center;
+  }
+
+  .login-form {
+    .sendCode {
+      position: absolute;
+      right: 30px;
+      bottom: -6px;
+      width: 88px;
+      height: 28px;
+      border-radius: 14px;
+      border: 1px solid @c_bfbfbf;
+      color: @c_bfbfbf;
+
+      &.active {
+        border: 1px solid @c_primary;
+        color: @c_primary;
+      }
+    }
+  }
+
+}

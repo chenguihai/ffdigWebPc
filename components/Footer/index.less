@@ -1,0 +1,77 @@
+@import '../../assets/default.less';
+
+.footer {
+  background: #fff;
+  box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.08);
+  height: 158px;
+  padding: 58px 0 12px;
+
+  .footerItem {
+    display: flex;
+    font-size: 14px;
+    height: 14px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 54px;
+  }
+
+  .footerLi {
+    width: 9.59%;
+    text-align: center;
+    cursor: pointer;
+
+    > a {
+      color: @c_333;
+      display: block;
+
+      &:hover {
+        color: #ac843a;
+      }
+    }
+  }
+
+
+  .codeWrap {
+    position: absolute;
+    top: 28px;
+    right: 14%;
+  }
+
+  .codeImg {
+    display: block;
+    text-align: right;
+    margin-left: auto;
+    width: 86px;
+    height: 86px;
+  }
+
+  .text {
+    margin: 6px 0 8px;
+    text-align: right;
+    font-size: 12px;
+    color: @c_333;
+    line-height: 12px;
+  }
+
+  .version {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #bbb;
+    height: 16px;
+    text-align: center;
+  }
+
+  .version .line {
+    margin: 0 20px;
+  }
+
+  .version .gonanIcon {
+    height: 16px;
+    color: #bbb;
+    text-indent: 25px;
+    background: no-repeat 0 0
+  }
+}
+

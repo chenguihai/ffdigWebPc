@@ -1,0 +1,143 @@
+@import '../../assets/default.less';
+
+.aboutMe {
+  //max-width: 1920px;
+  width: 100%;
+  height: 0;
+  margin-top: 60px;
+  padding: 6.8% 0 42.06%;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 21, 41, .08);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  background-attachment: fixed;
+
+  .img {
+    display: block;
+    width: 163px;
+    height: 34px;
+    margin: 0 auto 2.34%;
+    //padding: 130px 0 46px;
+    //padding-top: 6.77% ;
+  }
+
+  .subTitle {
+    .mixin_font_size(24px, @c_C7AD7B);
+    //margin-bottom: 114px;
+    margin-bottom: 5.9%;
+  }
+
+  .desc {
+    .mixin_font_size(16px, @c_bbb);
+    margin-bottom: 2.34%;
+  }
+}
+
+.elementMe {
+  //padding: 190px 0 68px;
+  padding: 10% 0 3.6%;
+  text-align: center;
+
+  .title {
+    .mixin_font_size(24px, @c_000);
+    //margin-bottom: 65px;
+    margin-bottom: 3.41%;
+  }
+
+  .desc {
+    .mixin_font_size(16px, @c_999);
+    //margin-bottom: 180px;
+    margin-bottom: 9.45%;
+  }
+
+  .itemWrap {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+
+    .item {
+      width: 300px;
+    }
+
+    .itemImg {
+      display: block;
+      width: 300px;
+      height: 270px;
+      margin-bottom: 26.5%;
+      //margin-bottom: 80px;
+    }
+
+    .itemDesc {
+      margin-bottom: 0;
+      .mixin_font_size(24px, @c_AC843A);
+    }
+  }
+}
+
+.objectTitle {
+  //padding: 190px 0 76px;
+  padding: 10% 0 4%;
+  .mixin_font_size(24px, @c_000);
+  text-align: center;
+}
+
+.objectMe {
+  //padding: 56px 0 100px;
+  padding: 2.9% 0 5.3%;
+  background-color: @c_f6f6f6;
+
+  .objectWrap {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: space-between;
+
+    .objectItem {
+      width: 360px;
+      background-color: @c_fff;
+      //padding: 54px 0 20px;
+      padding: 4.5% 0 1.7%;
+    }
+
+    .objectImg {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .subTitle {
+      .mixin_font_size(16px, @c_AC843A);
+      margin: 30px 0 16px;
+      height: 90px;
+      line-height: 90px;
+      border-bottom: 1px solid rgba(207, 169, 114, .34);
+    }
+
+    .objectDesc {
+      color: @c_bbb;
+      line-height: 36px;
+      margin-bottom: 0;
+    }
+  }
+
+  .contactUs {
+    //margin-top: 240px;
+    margin-top: 12.6%;
+    font-size: 16px;
+    text-align: center;
+
+    .label {
+      color: @c_000;
+      margin-right: 30px;
+    }
+
+    .text {
+      color: @c_999;
+    }
+  }
+}
+

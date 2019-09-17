@@ -1,0 +1,147 @@
+@import '../../assets/default.less';
+@import '../articleContent/index';
+
+.trendThemeWrap {
+  display: flex;
+  max-width: 1370px;
+  margin: 0 auto;
+  padding: 20px 0;
+  //height: calc(~'100vh - 45px');
+  > .left {
+    width: 166px;
+    margin-right: 24px;
+  }
+
+  > .right {
+    flex: 1;
+    max-width: 1212px;
+    width: 100%;
+  }
+
+  .recommendTitle {
+    height: 24px;
+    line-height: 24px;
+    font-size: 24px;
+    margin: 50px auto 20px;
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+.poster {
+  display: flex;
+  padding: 0 6px;
+
+  .left {
+    width: 66.667%;
+    //max-height: 450px;
+    position: relative;
+    margin-right: 20px;
+    //background: no-repeat center/cover;
+
+    .posterImg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      //position: relative;
+      //z-index: 20;
+    }
+
+
+    .title {
+      color: @c_fff;
+      margin-top: 20px;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: bold;
+      .mixin_line-ellipses(2);
+    }
+  }
+
+
+  .right {
+    flex: 1;
+
+    .rightNews {
+      display: flex;
+      align-items: center;
+      //height: 62px;
+      height: 58px;
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    .rightLi {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    li:last-child {
+      .rightLi {
+        margin-bottom: 0;
+      }
+    }
+
+    .smallPoster {
+      display: block;
+      width: 42.1%;
+      //height: 94px;
+      margin-right: 10px;
+    }
+
+    .posterDesc {
+      font-weight: bold;
+    }
+
+    .posterTimer {
+      font-size: 12px;
+      line-height: 12px;
+      margin-top: 14px;
+      color: @c_bbb;
+    }
+  }
+}
+
+.posterAbs {
+  position: absolute;
+  z-index: 10;
+
+  &.bigPoster {
+    //left: 40px;
+    //bottom: 32px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0 20px 32px 20px;
+
+  }
+
+  &.smallPoster {
+    //left: 10px;
+    left: 0;
+    bottom: 4px;
+    width: 100%;
+    padding: 0 4px;
+    overflow: hidden;
+  }
+
+  .label {
+    display: flex;
+    align-items: center;
+    height: 24px;
+  }
+
+  .labelLi {
+    //background: @c_333;
+    //opacity: 0.3;
+    background: rgba(51, 51, 51, .3);
+    height: 24px;
+    line-height: 24px;
+    border-radius: 12px;
+    margin-right: 8px;
+    font-size: 12px;
+    padding: 0 10px;
+    color: @c_fff;
+  }
+}

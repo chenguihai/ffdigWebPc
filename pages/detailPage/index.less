@@ -1,0 +1,256 @@
+@import '../../assets/default.less';
+
+.hp_container {
+  width: 100%;
+  //width: 1920px;
+  margin: 0 auto;
+}
+
+.detailPage {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 10px 100px;
+
+  .detailView {
+    display: flex;
+  }
+
+  .ant-row:after, .ant-row:before {
+    display: none;
+  }
+
+  > .ant-divider-horizontal {
+    margin: 16px 0 32px 0;
+  }
+
+  .detailForm {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 1200px;
+    padding-left: 120px;
+
+    &.fixed {
+      position: fixed;
+      top: @headerH_45;
+      z-index: 9;
+      background-color: @c_fff;
+    }
+
+    .ant-breadcrumb-link:not(:last-child) {
+      cursor: pointer;
+    }
+  }
+
+  .popoverText {
+    display: inline-flex;
+    align-items: center;
+    height: 32px;
+    line-height: 32px;
+
+    .text {
+      color: @c_333;
+      padding-right: 30px;
+
+      &:after {
+        position: absolute;
+        top: 13px;
+        right: 16px;
+        .triangle(top, 6px, 4px, @c_999);
+      }
+    }
+
+    .icon {
+      width: 5px;
+      height: 8px;
+      line-height: 8px;
+    }
+  }
+}
+
+//详情展示
+.detailView {
+  .shopUl {
+    > li {
+      display: flex;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
+
+      span {
+        margin-right: 20px;
+      }
+
+      .ant-rate-star {
+        margin-right: 4px;
+      }
+
+      .anticon-star {
+        font-size: @font14;
+      }
+
+      .stars {
+        margin-top: -4px;
+      }
+
+      b {
+        display: inline-block;
+        width: 1px;
+        height: 20px;
+        margin: 0 20px;
+        background: @c_ccc;
+      }
+
+      .iconInfo {
+
+      }
+
+      em {
+        color: @c_999;
+        margin-right: 8px;
+      }
+    }
+
+  }
+
+  .shopBox {
+    > h4 {
+      color: @c_333;
+      height: 48px;
+      line-height: 48px;
+    }
+
+    > .text {
+      color: @c_999;
+      line-height: 26px;
+      word-wrap: break-word;
+    }
+  }
+}
+
+//推荐产品列表
+.recommendGoodsWrap {
+  > .ant-divider-horizontal {
+    margin: 80px 0 40px;
+    padding: 0 24px;
+    line-height: 1px;
+    height: 1px;
+  }
+
+  .title {
+    height: 30px;
+    line-height: 30px;
+    font-size: 30px;
+    color: @c_333;
+    text-align: center;
+    margin: 180px auto 70px
+  }
+
+  .recommendGoodsBox {
+    max-width: 1200px;
+    //height: 462px;
+    margin: 0 auto;
+
+  }
+
+  .recommendGoodsUl {
+    @height16: 16px;
+    @height14: 14px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 100px;
+    justify-content: space-between;
+    transition: all .5s linear;
+
+    > .previous, > .next {
+      position: absolute;
+      cursor: pointer;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background-size: 100%;
+      color: transparent;
+      top: 38%;
+      z-index: 10;
+      opacity: 0;
+      .mixin_icon_img_cover();
+    }
+
+    > .previous {
+      left: 20px;
+    }
+
+    > .next {
+      right: 20px;
+    }
+
+    &:hover {
+      > .previous, > .next {
+        opacity: .8;
+        color: @c_primary;
+
+        &.active {
+          opacity: 0;
+        }
+      }
+    }
+
+    > li {
+      //flex: 1;
+      width: 25%;
+      //width: 300px;
+      box-sizing: border-box;
+      padding: 0 9px 30px;
+      text-align: center;
+
+      .img {
+        width: 286px;
+        height: 382px;
+        border-radius: 10px 10px 0 0;
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        //border-top-left-radius: 10px;
+        //border-top-right-radius: 10px;
+      }
+
+      .name {
+        height: 18px;
+        line-height: 18px;
+        margin: 18px 0 10px;
+        color: @c_333;
+        font-size: 18px;
+      }
+
+      .site {
+        color: @c_999;
+        font-size: 12px;
+        line-height: 12px;
+      }
+
+    }
+
+    .priceBox {
+      height: @height16;
+      line-height: @height16;
+      color: @c_666;
+
+      .price {
+      }
+
+      i {
+        color: @c_999;
+        margin: 0 12px 0 13px;
+      }
+
+      .num {
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+

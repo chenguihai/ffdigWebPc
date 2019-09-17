@@ -1,0 +1,80 @@
+@import "../../assets/default.less";
+
+.newMask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, .4);
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.15);
+}
+
+
+.newBox, .newContentBox {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 30;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 16px 30px;
+  background-color: @c_fff;
+
+  .newTitle {
+    color: @c_AC843A;
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 16px;
+  }
+
+  .newBtnGround {
+    margin-top: 30px;
+  }
+
+  .cancelBtn {
+    margin-right: 48px;
+  }
+
+  .ant-form {
+    flex: 1;
+    width: 100%;
+  }
+
+  .ant-form-item {
+    margin-bottom: 0;
+  }
+
+  .ant-input {
+    width: 100%;
+    border-color: @c_e8e8e8;
+    height: 36px;
+    border-radius: 20px;
+  }
+
+  .ant-btn {
+    border-radius: 5px;
+  }
+
+  .iconRight {
+    .icon_fun(20px, 14px);
+  }
+
+  .iconDelete {
+    .icon_fun(14px, 14px, @c_999);
+  }
+}
+
+.newBox {
+  bottom: 0;
+}
+
+.newContentBox {
+  .newTitle {
+    width: 100%;
+  }
+}

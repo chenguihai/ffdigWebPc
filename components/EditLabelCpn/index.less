@@ -1,0 +1,59 @@
+@import "../../assets/default";
+
+.editWrap {
+  @px_16: 16px;
+  width: 350px;
+  height: 218px;
+  padding: 20px 14px;
+
+  .editTitle {
+    font-size: @px_16;
+    line-height: @px_16;
+    margin-bottom: @px_16;
+    //text-align: center;
+    color: @c_AC843A;
+  }
+
+  .ant-input {
+    height: 36px;
+    border-radius: 20px;
+  }
+
+  .ant-btn {
+    border-radius: 5px;
+  }
+
+  .btnGroup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 14px;
+    margin: 56px -14px 0;
+
+    .text {
+      flex: 1;
+      color: @c_333;
+      cursor: pointer;
+
+      &:hover {
+        color: @c_AC843A;
+      }
+    }
+  }
+
+  .cancelBtn {
+    margin-right: 18px;
+  }
+
+}
+
+.detailEditWrap {
+  .editTitle {
+    width: 100%;
+  }
+
+  .btnGroup {
+    background-color: @c_fff;
+  }
+}

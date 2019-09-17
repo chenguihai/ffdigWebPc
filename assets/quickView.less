@@ -1,0 +1,31 @@
+@import './default.less';
+
+.rightTitleWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .title {
+    font-size: 20px;
+    line-height: 26px;
+    flex: 1;
+    color: @c_333;
+  }
+
+  .linkIcon {
+    width: 28px;
+    margin: 0 30px;
+    color: @c_bbb;
+    .mixin_iconfont(22px);
+  }
+
+  .detailLoveIcon {
+    width: 31px;
+    color: @c_333;
+    .mixin_iconfont(28px);
+
+    &.active {
+      color: @c_C7AD7B;
+    }
+  }
+}

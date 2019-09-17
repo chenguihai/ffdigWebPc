@@ -1,0 +1,77 @@
+@import '../../assets/default.less';
+
+.collapseArticle {
+  width: 166px;
+  padding: 0 10px;
+  border-right: 1px solid @c_666;
+
+  &.active {
+    position: fixed;
+  }
+
+  .clearAll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 146px;
+    height: 24px;
+    background-color: #f7f3ec;
+    color: @c_AC843A;
+    border: 1px solid #EBE1CE;
+    cursor: pointer;
+
+    .clearIcon {
+      margin-left: 10px;
+      .icon_fun(12px, 11px, @c_AC843A);
+    }
+  }
+
+  .labelLi {
+    display: inline-flex;
+    align-items: center;
+    width: 114px;
+    height: 20px;
+    line-height: 20px;
+    background: @c_000;
+    color: @c_fff;
+    background-color: @c_000;
+    padding: 0 8px 0 14px;
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+
+  .deleteIcon {
+    .iconDelete(9px, @c_fff);
+  }
+
+  .ant-collapse-borderless {
+    background-color: transparent;
+  }
+
+  .checkboxArticle {
+    line-height: 28px;
+
+    .ant-checkbox-inner {
+      width: 12px;
+      height: 12px;
+    }
+
+    .ant-checkbox-group-item {
+      font-size: 12px;
+      line-height: 28px;
+      .mixin_line-ellipses();
+
+      &:hover {
+        background-color: #F3EEE4;
+      }
+    }
+  }
+
+  .ant-checkbox-wrapper {
+    color: @c_999;
+  }
+
+  .ant-checkbox-checked + span {
+    color: @c_AC843A;
+  }
+}

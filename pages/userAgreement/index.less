@@ -1,0 +1,55 @@
+@import '../../assets/default.less';
+
+.userAgreeBg {
+  margin-top: 60px;
+  background-color: @c_bg;
+  padding: 20px 0 30px;
+}
+
+.userAgree {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px 76px;
+  background-color: @c_fff;
+
+  .title {
+    height: 88px;
+    line-height: 88px;
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .closeIcon {
+    position: absolute;
+    right: 30px;
+    top: 32px;
+    z-index: 10;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 24px;
+    color: @c_333;
+    cursor: pointer;
+    transform: rotate(0deg);
+    transition: transform .3s linear;
+    display: block;
+
+    &:hover {
+      transform: rotate(360deg);
+    }
+  }
+
+  .content, .subTitle {
+    line-height: 36px;
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+
+  .content {
+    color: @c_666;
+  }
+
+  .subTitle {
+    font-weight: bold;
+  }
+}

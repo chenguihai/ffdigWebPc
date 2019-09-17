@@ -1,0 +1,207 @@
+/** 常用色值 **/
+@c_primary: #c7ad7b;
+@c_fff: #fff;
+@c_ccc: #ccc;
+@c_999: #999;
+
+
+@c_666: #666;
+@c_000: #000000;
+@c_dfdfdf: #DFDFDF;
+@c_eee: #EEE;
+@c_ddd: #ddd;
+@c_bbb: #bbb;
+@c_e8e8e8: #E8E8E8;
+@c_d9d9d9: #d9d9d9;
+@c_efefef: #efefef;
+@c_f5f5f5: #f5f5f5;
+@c_bfbfbf: #BFBFBF;
+@c_F0F4F7: #F0F4F7;
+@c_bg: #f8f8f8;
+@c_434343: #434343;
+@c_e4e4e4: #e4e4e4;
+@c_A6813B: #A6813B;
+@c_f7f7f7: #f7f7f7;
+@c_888: #888;
+@c_AC843A: #AC843A;
+@c_F4DDB3: #F4DDB3;
+@c_C7AD7B: #C7AD7B;
+@c_f6f6f6: #f6f6f6;
+@c_333: #333;
+@c_B98A48: #B98A48;
+@c_ED3737: #ED3737;
+@c_A62424: #A62424;
+@c_bca77e: #bca77e;
+@c_A9926F: #A9926F;
+
+/** 常用字体大小 **/
+@font34: 34px;
+@font24: 24px;
+@font22: 22px;
+@font20: 20px;
+@font18: 18px;
+@font16: 16px;
+@font14: 14px;
+@font12: 12px;
+@headerH_93: 93px;
+@headerH_45: 45px;
+//git push -u origin master
+.primary_btn(@h:24px,@b:12px,@c:@c_primary) {
+  box-sizing: border-box;
+  height: @h;
+  line-height: @h;
+  border: 1px solid @c;
+  color: @c;
+  border-radius: @b;
+}
+
+.primary_btn_active(@c:@c_primary) {
+  border: 1px solid @c;
+  color: @c;
+}
+
+.triangle(right,@tb:16px,@lr:10px,@c:@c_primary) {
+  border-color: transparent transparent transparent @c;
+  border-top-width: @tb;
+  border-left-width: @lr;
+  border-right-width: @lr;
+  border-bottom-width: @tb;
+}
+
+.triangle(bottom,@tb:16px,@lr:10px,@c:@c_primary) {
+  border-color: transparent transparent @c transparent;
+  border-top-width: @tb;
+  border-left-width: @lr;
+  border-right-width: @lr;
+  border-bottom-width: @tb;
+}
+
+.triangle(top,@tb:16px,@lr:10px,@c:@c_primary) {
+  border-color: @c transparent transparent transparent;
+  border-top-width: @tb;
+  border-left-width: @lr;
+  border-right-width: @lr;
+  border-bottom-width: @tb;
+}
+
+.triangle(@_,@tb:16px,@lr:10px,@c:@c_primary) {
+  display: inline-block;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.mixin_line-ellipses(@line-num: 1) {
+  //white-space: nowrap;
+  text-overflow: ellipsis;
+  //overflow: hidden;
+  //@supports(-webkit-line-clamp: 1) {
+  display: -webkit-box;
+  /* autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /* autoprefixer: on */
+  -webkit-line-clamp: @line-num;
+  word-break: break-all;
+  overflow: hidden;
+  white-space: normal;
+  //text-overflow: clip;
+  //}
+}
+
+.icon_fun(@w:14px,@h:14px,@c:@c_primary) {
+  width: @w;
+  font-size: @w;
+  height: @h;
+  line-height: @h;
+  color: @c;
+}
+
+.dividingLine(@w:14px,@m:14px) {
+  border-width: 0;
+  background: @c_dfdfdf;
+  width: 1px;
+  height: @w;
+  margin: 0 @m;
+}
+
+.iconDelete(@w:14px,@c:#818d9a) {
+  cursor: pointer;
+  margin-left: 10px;
+  width: @w;
+  font-size: @w;
+  height: @w;
+  line-height: @w;
+  color: @c;
+}
+
+.mixin_bg-image(@url:"user-queehg") {
+  @iconUrl2: "@2x.png";
+  background: url("@{url}@{iconUrl2}") no-repeat 0 0;
+  background-size: 100% 100%;
+  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3) {
+    @iconUrl3: "@3x.png";
+    .mixin_bg-image(@url:"user-queehg") {
+      background: url("@{url}@{iconUrl3}") no-repeat 0 0;
+      background-size: 100% 100%;
+    }
+  }
+}
+
+.mixin_bg-img(@url:"user-queehg") {
+  background: url("@{url}") no-repeat 0 0;
+  background-size: 100% 100%;
+}
+
+.mixin_bg-update-img(@url:"user-queehg") {
+  background-image: url("@{url}");
+}
+
+.mixin_vertical_level(@index:10) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: @index;
+}
+
+.mixin_bg_img_cover() {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mixin_icon_img_cover() {
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mixin_font_size(@h:14px,@c:@c_333) {
+  font-size: @h;
+  line-height: @h;
+  color: @c;
+}
+
+.mixin_iconfont(@h:14px) {
+  height: @h;
+  line-height: @h;
+  font-size: @h;
+}
+
+@scrollbar-color: #999;
+.mixin_scroll-default-style (@width: 2px) {
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 @width rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+  }
+  &::-webkit-scrollbar {
+    width: @width;
+    background-color: #fff;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: @scrollbar-color;
+    border-radius: @width;
+    background-image: -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0.5) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 75%, transparent 75%, transparent)
+  }
+}

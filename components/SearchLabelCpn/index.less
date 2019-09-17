@@ -1,0 +1,103 @@
+@import "../../assets/default";
+
+.searchCpn {
+  @px_16: 16px;
+  width: 350px;
+  //max-height: 502px;
+  padding: 20px 14px 0 14px;
+
+  .searchList {
+    max-height: 382px;
+    //height: 382px;
+    overflow-y: auto;
+
+    .labelListWrap {
+      padding-bottom: 18px;
+    }
+
+    .title {
+      color: @c_333;
+      height: 28px;
+      line-height: 28px;
+      font-weight: bold;
+    }
+
+    .labelUl {
+    }
+
+    .labelLi {
+      height: 30px;
+      line-height: 30px;
+      cursor: pointer;
+      color: @c_888;
+
+      &:hover {
+        color: @c_AC843A;
+      }
+    }
+  }
+
+  .searchBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    padding: 0 15px 27px;
+
+    .ant-input {
+      height: 36px;
+      border-radius: 20px;
+    }
+
+    .ant-select-dropdown {
+      box-shadow: none;
+    }
+
+    .ant-input-search {
+      flex: 1;
+    }
+
+    .inputCpn {
+      //width: 170px;
+      height: 28px;
+      //border: 1px solid @c_ccc;
+      border-radius: 14px;
+    }
+
+    .iconLove {
+      //.icon_fun(20px, 20px, @c_333);
+      width: 16px;
+      .mixin_iconfont(14px);
+    }
+  }
+
+  .addLabelBtn {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding-left: 30px;
+    margin: 0 -14px;
+    border-top: 1px solid @c_eee;
+    cursor: pointer;
+
+    &:hover {
+      background-color: @c_eee;
+    }
+
+    .addIcon {
+      width: 17px;
+      color: @c_AC843A;
+      .mixin_iconfont(18px);
+    }
+
+    .text {
+      margin-left: 7px;
+    }
+  }
+}
+
+.ant-popover-inner-content {
+  padding: 0;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}

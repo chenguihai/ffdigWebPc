@@ -1,0 +1,62 @@
+@import '../../assets/default.less';
+.navLeft {
+  background: #fff;
+  width: 300px;
+
+  .navHead {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0 20px;
+    margin-bottom: 6px;
+    background-color: #fff;
+  }
+
+  .navImg {
+    display: flex;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+  }
+
+  .navName {
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: bold;
+    text-align: center;
+    color: #25254B;
+    padding: 0 20px;
+    .mixin_line-ellipses();
+  }
+
+  .navMenuBox {
+    height: calc(~'100vh - 308px');
+  }
+
+  .navMenu {
+    background-color: #fff;
+    text-align: center;
+
+    .navItem {
+      height: 88px;
+      line-height: 88px;
+      cursor: pointer;
+      border-bottom: 1px solid #eee;
+
+      &.active {
+        color: #fff;
+        background-color: #d4c5a5;
+      }
+    }
+  }
+
+  .ant-menu-item {
+    border-bottom: 1px solid #eee;
+  }
+}
+
+.space_6 {
+  height: 6px;
+  background-color: #f8f8f8;
+}

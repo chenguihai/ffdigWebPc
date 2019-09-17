@@ -1,0 +1,60 @@
+@import './default.less';
+
+.accountMngForm {
+  padding: 90px 0 30px 56px;
+}
+
+.accountManage {
+  @height14: 14px;
+
+  .accountBox {
+    display: flex;
+    height: 76px;
+    //align-items: center;
+    .ant-input {
+      height: 48px;
+    }
+
+    > .errorInfo {
+      position: absolute;
+      //bottom: -27px;
+      //left: 80px;
+      bottom: 0;
+      left: 60px;
+    }
+
+    .inputCpn {
+      width: 230px;
+      margin-right: 10px;
+    }
+
+    .label {
+      width: 60px;
+      margin-top: 17px;
+    }
+
+    .text {
+      margin-top: 17px;
+      width: 200px;
+      margin-left: 11px;
+    }
+
+    .iconEdit {
+      margin-top: 17px;
+      margin-left: 20px;
+      .icon_fun(14px, 14px, @c_C7AD7B);
+    }
+
+    .iconRight {
+      margin-top: 17px;
+      margin-left: 20px;
+      .icon_fun(20px, 14px, @c_C7AD7B);
+    }
+
+    .iconDelete {
+      margin-top: 17px;
+      margin-left: 10px;
+      .icon_fun(14px, 14px, @c_999);
+    }
+  }
+}

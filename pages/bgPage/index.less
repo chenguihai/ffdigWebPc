@@ -1,0 +1,167 @@
+@import '../../assets/default.less';
+
+.infinityTableBox {
+  overflow: auto;
+}
+
+.infinityTable {
+  min-width: 1100px;
+
+  .ant-table-header {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-bottom: 0 !important;
+  }
+
+  .ant-table-thead {
+    background: #fff;
+
+    tr > th {
+      height: 32px;
+      line-height: 32px;
+      padding: 14px 5px;
+    }
+  }
+
+  .ant-table-body {
+    overflow-x: hidden !important;
+
+    > table {
+      width: 100%;
+      border-top: 1px solid @c_e4e4e4;
+      border-bottom: 1px solid @c_e4e4e4;
+
+      tr {
+        vertical-align: top;
+      }
+
+      td, th {
+        border-top: 1px solid @c_e4e4e4;
+        border-bottom: 1px solid @c_e4e4e4;
+        padding: 14px 5px;
+      }
+
+      th {
+        height: 34px;
+      }
+    }
+  }
+}
+
+
+//产品标签
+.productLabel {
+  > span {
+    display: flex;
+    height: 32px;
+    min-width: 120px;
+    align-items: center;
+    padding: 0 11px;
+    margin-top: 3px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid @c_d9d9d9;
+    transition: all 0.3s;
+
+    &:hover {
+      border-color: @c_primary;
+    }
+  }
+}
+
+//分页的样式
+.paginationBoX {
+  margin: 20px 0;
+  padding: 0 38px;
+
+  .ant-pagination {
+    text-align: right;
+  }
+}
+
+.table-desc-box {
+  .table-desc {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+
+    .key {
+      width: 70px;
+      font-weight: bold;
+    }
+
+    .value {
+      &.active {
+        color: @c_primary;
+      }
+    }
+  }
+}
+
+.thumbnail {
+  max-width: 161px;
+  //height: 196px;
+}
+
+.addressBox {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  color: @c_999;
+
+  .addressIcon {
+    margin: 0 10px;
+    color: @c_999;
+  }
+}
+
+//.ant-table td {
+//  overflow: hidden;/*超出部分隐藏*/
+//  white-space: nowrap;/*不换行*/
+//  text-overflow:ellipsis;/*超出部分文字以...显示*/
+//}
+//const workbook = XLSX.read(result, {type: 'binary'});
+//let data = workbook.Sheets[workbook.SheetNames[0]];// 存储获取到的数据
+//
+//data = XLSX.utils.sheet_to_json(data, {header: 1})
+//取消收藏的按钮组
+.collectWrap {
+  display: flex;
+  height: 0;
+  background-color: #f6f6f6;
+  padding: 0 40px 0 20px;
+  align-items: center;
+  justify-content: space-between;
+  transition: height .3s linear;
+  overflow: hidden;
+
+  &.active {
+    height: 76px;
+  }
+
+  .cbWrap {
+    flex: 1;
+  }
+
+  .ant-btn-lg {
+    border-radius: 20px;
+    margin-left: 38px;
+  }
+}
+
+
+.noCollectEmpty {
+  @height16: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(~'100vh - 236px');
+
+  > span {
+    color: @c_333;
+    font-size: @height16;
+    line-height: @height16;
+    margin: 52px auto 0;
+  }
+}
